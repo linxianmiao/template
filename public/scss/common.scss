@@ -1,0 +1,41 @@
+@import 'variables.sass';
+
+
+.notfound-page, .error-page {
+    .container {
+        max-width: 1000px;
+        padding: 40px 0;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+
+        >h1 {
+            color: rgba($color: #fff, $alpha: .6);
+        }
+
+        >p {
+            margin: 16px 0;
+            font-size: $f-size-20;
+            color: rgba($color: #fff, $alpha: .6);
+        }
+
+
+        >div {
+            margin: 8px 0 0 0;
+            color: rgba($color: #fff, $alpha: .8);
+
+            >a {
+                color: #5d5ce6;
+            }
+        }
+    }
+}
+
+
+@include mobile {
+    .notfound-page, .error-page {
+        .container {
+            padding: 40px 24px;
+        }
+    }
+}
