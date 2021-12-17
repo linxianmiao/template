@@ -5,13 +5,19 @@ import { Link } from 'react-router-dom';
 export default observer((props: any) => {
     const {loginStore} = useStores();
 
-    if( loginStore.isLogin === false ){
-        alert("Not Sign In")
-        location.href = '/login'
+   // if( loginStore.isLogin === false ){
+   //     alert("Not Sign In")
+   //     location.href = '/login'
+   // }
+
+
+    const onclick = () => {
+        
     }
     return(
         <div>
             <span>Hello</span>
+
             <Link to="/login">login</Link>
         </div>
     );

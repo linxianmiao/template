@@ -1,1 +1,19 @@
+
+logs
+/Dockerfile
+/dist*
+# testing
+/coverage
+
+# production
+.dll-link-plugin
+/.husky
+
+# misc
+.DS_Store
+.vscode
+
+package-lock.json
+*.log*
+logs*
 node_modules

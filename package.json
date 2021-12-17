@@ -7,12 +7,15 @@
     "precommit": "npm run build",
     "prebuild": "cross-env NODE_ENV=production webpack --config webpack.dll.js",
     "build": "cross-env NODE_ENV=production webpack --progress --config ./webpack.config.js",
-    "dev": "ts-node-dev --respawn --transpile-only --project tsconfig.backend.json backend/server.ts --env=onebox"
+    "dev": "npx webpack server"
   },
   "author": "Haiwei",
   "license": "ISC",
   "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
     "@maxmind/geoip2-node": "^3.2.0",
+    "@mui/material": "^5.2.4",
     "@web-mono/core": "^1.0.0",
     "@web-mono/errors": "^1.0.1",
     "@web-mono/graphql": "^1.0.0",

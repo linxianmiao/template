@@ -4,8 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Routes from './routes';
 import { loginStore } from './store';
 import { Provider } from './store/ContextProvider';
-
-
+import '../public/scss/grid.scss'
 
 const initstore = {
     loginStore

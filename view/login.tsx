@@ -1,7 +1,7 @@
 import React from "react";
 import { observer } from 'mobx-react-lite';
 import { useStores } from './store/ContextProvider';
-
+import  Grid from '@mui/material/Grid'
 export default observer((props: any) => {
 
     const {loginStore} = useStores();
@@ -32,6 +32,14 @@ export default observer((props: any) => {
                 
                 <button type='button' onClick={onClickSubmit}>submit</button> 
             </form>
+            <Grid container spacing={2}>
+                <Grid item xs={6}>
+                    <span>sfsaf</span>
+                </Grid>
+                <Grid item xs={6}>
+                    <span>sfsafss</span>
+                </Grid>
+            </Grid>
         </div>
     );
 })
