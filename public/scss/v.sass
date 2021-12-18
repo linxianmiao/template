@@ -1,0 +1,90 @@
+
+$f-size-12: 0.75rem
+$f-size-13: 0.8125rem
+$f-size-14: 0.875rem
+$f-size-15: 0.9375rem
+$f-size-16: 1rem
+$f-size-18: 1.125rem
+$f-size-20: 1.25rem
+$f-size-22: 1.375rem
+$f-size-24: 1.5rem
+$f-size-28: 1.75rem
+$f-size-30: 1.875rem
+$f-size-32: 2rem
+$f-size-34: 2.125rem
+$f-size-36: 2.25rem
+$f-size-38: 2.375rem
+$f-size-40: 2.5rem
+$f-size-44: 2.75rem
+$f-size-45: 2.8125rem
+$f-size-48: 3rem
+$f-size-50: 3.125rem
+$f-size-52: 3.25rem
+$f-size-56: 3.5rem
+$f-size-64: 4rem
+
+=ellipsis
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+
+
+///////////////////////////
+// Break points:
+// max: 1920px
+// 1. desktop-xl:      > 1440px
+// 1. desktop:         1200px ~ 1440px
+// 1. desktop-xs:      980px  ~ 1199px
+// 1. mobile:          < 979px
+
+=desktop-xl
+    @media only screen and (min-width: 1440px)
+        @content
+
+=desktop-lg
+    @media only screen and (min-width: 980px) and (max-width: 1440px - 1px)
+        @content
+
+=desktop-md
+    @media only screen and (min-width: 980px) and (max-width: 1200px - 1px)
+        @content
+
+
+=mobile
+    @media only screen and (min-width: 150px) and (max-width: 980px - 1px)
+        @content
+
+@mixin columns($breakpoint)
+  .#{$breakpoint}-auto
+    flex-grow: 0
+    max-width: none
+    flex-basis: base
+  @for $i from 1 through 12  
+    .#{$breakpoint}-#{$i}
+      flex-grow: 0
+      max-width: calc( ( 100% /  12 ) * #{$i} )
+      flex-basis: calc( ( 100% /  12 ) * #{$i} )
+
+$base: 4px
+@mixin spacing($breakpoint)
+  @if $breakpoint == 'md'
+    $base: 8px
+  @else if $breakpoint == 'sm'
+    $base: 8px
+  @else if $breakpoint == 'xs'
+    $base: 8px
+  @else if $breakpoint == 'lg'
+    $base: 8px
+  @else if $breakpoint == 'xl'
+    $base: 8px
+  @for $i from 1 through 10  
+    .spacing-#{$breakpoint}-#{$i}
+      width: calc(100% + #{$base} * #{$i})
+      margin-top: -1 * $base * $i
+      margin-left: -1 * $base * $i
+      > .grid-item 
+        padding-left: $base * $i
+        padding-top: $base * $i
+      > .grid-container
+        margin-top: -1 * $base * $i
+        margin-left: -1 * $base * $i

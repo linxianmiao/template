@@ -1,5 +1,6 @@
 {
-  "app.js": "/js/app.b310b43718fe45ca830a.js",
+  "app.css": "/css/app.083f8229352ac79fa443.css",
+  "app.js": "/js/app.083f8229352ac79fa443.js",
   "fonts/rubik/rubik-v14-latin-600.svg": "/fonts/rubik/rubik-v14-latin-600.svg",
   "fonts/rubik/rubik-v14-latin-700.svg": "/fonts/rubik/rubik-v14-latin-700.svg",
   "fonts/rubik/rubik-v14-latin-500.svg": "/fonts/rubik/rubik-v14-latin-500.svg",
@@ -34,8 +35,8 @@
   "images/svgs/password.svg": "/images/svgs/password.svg",
   "images/svgs/social-discord.svg": "/images/svgs/social-discord.svg",
   "images/svgs/eye.svg": "/images/svgs/eye.svg",
-  "images/svgs/social-twitter.svg": "/images/svgs/social-twitter.svg",
   "index.html": "/index.html",
+  "images/svgs/social-twitter.svg": "/images/svgs/social-twitter.svg",
   "images/svgs/checked.svg": "/images/svgs/checked.svg",
   "images/svgs/out.svg": "/images/svgs/out.svg",
   "images/svgs/close.svg": "/images/svgs/close.svg",
